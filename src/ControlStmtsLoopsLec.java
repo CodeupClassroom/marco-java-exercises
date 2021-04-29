@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class ControlStmtsLoopsLec {
 
     public static void main(String[] args){
-    //Boolean Expressions
+
+        //Boolean Expressions
     //An expression that evaluates to a boolean value (5 == 5 //t, 5 < 6 //t, 5 > 6 //f)
     //These relational operators will have similarities to our JavaScript work - however: no truth-y, or false-y (no === vs ==, <== vs <=, etc.)
 
