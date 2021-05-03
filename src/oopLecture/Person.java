@@ -15,6 +15,7 @@ public class Person {
         Person ken = new Person();
         Person vanessa = new Person();
         Person douglas = new Person();
+
         Scanner scanner = new Scanner(System.in);
 
         String myName = "Ken";
