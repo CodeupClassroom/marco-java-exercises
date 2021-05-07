@@ -2,11 +2,12 @@ import java.util.*;
 
 public class CollectionsLecture {
 
-    public static void printEachElement(ArrayList<String> strings) {
+    public static void printEachElement(List<String> strings) {
         for (String str : strings) {
             System.out.println(str);
         }
     }
+
 
     public static ArrayList<String> upperLastElement(ArrayList<String> input) {
         if (input.size() == 0) return input;
@@ -182,7 +183,10 @@ public class CollectionsLecture {
 
 //        ArrayList<String> arrayList = new ArrayList<>(Arrays.asList("bob", "steve", "justin"));
 //        LinkedList<String> linkedList = new LinkedList<>(Arrays.asList("bob", "steve", "justin"));
-//
+//        printEachElement(arrayList);
+//        printEachElement(linkedList);
+
+
 //        printEachElement(linkedList);
 
 
@@ -197,32 +201,44 @@ public class CollectionsLecture {
 //        String str1 = (String) unsafe.get(2); // must explicitly cast
 //        String str2 = (String) unsafe.get(0); // can lead to runtime exceptions
 
+
+
+
+
+
+
         // ----------------------------- Hash Maps
 
         // creating hash maps
 
-//        Map<String, String> usernames = new HashMap<>();
-//        usernames.put("Ryan", "ryanorsinger");
-//        usernames.put("Luis", "MontealegreLuis");
-//        usernames.put("Zach", "zgulde");
-//        usernames.put("Fernando", "fmendozaro");
-//        usernames.put("Justin", "jreich5");
-//        System.out.println(usernames);
+        Map<String, String> usernames = new HashMap<>();
+
+        usernames.put("Ryan", "ryanorsinger");
+        usernames.put("Luis", "MontealegreLuis");
+        usernames.put("Zach", "zgulde");
+        usernames.put("Fernando", "fmendozaro");
+        usernames.put("Justin", "jreich5");
+
+        System.out.println(usernames);
 
         // getting values from and info about hash map
 
 //        System.out.println(usernames);
 //        System.out.println(usernames.get("Justin"));
+//        System.out.println(usernames.get("Zach"));
+
 //        System.out.println(usernames.get("Phillip"));
 //        System.out.println(usernames.getOrDefault("Fred", "gocodeup"));
 //        System.out.println(usernames.containsKey("Luis"));
+
+        // !!!!! getting a list of map keys and then searching for a match in the values
 
         // updating hash maps
 
 //        usernames.put("Ryan", "rorsinger");
 //        System.out.println(usernames);
 //        usernames.put("Ryan", "Test");
-//
+//        System.out.println(usernames);
 //        usernames.putIfAbsent("Zach", "coderdude24");
 //        System.out.println(usernames);
 //        System.out.println(usernames);
@@ -246,7 +262,7 @@ public class CollectionsLecture {
 
              "Justin" could be returned from nameHashMap.get("Reich")
 
-            TODO: Create a HashMap containing three people in the class with keys using their
+            BONUS TODO: Create a HashMap containing three people in the class with keys using their
              first name and values that are an ArrayList of strings containing at least two
              objects visible in their background.
 
@@ -256,6 +272,20 @@ public class CollectionsLecture {
              from backgroundHashMap.get("Justin")
 
          */
+//
+//        Map<String, String> namesHashMap = new HashMap<>();
+//        namesHashMap.put("Reich", "Justin");
+//        namesHashMap.put("Moore", "Samuel");
+//        namesHashMap.put("Howell", "Kenneth");
+//
+//        System.out.println(namesHashMap);
+//
+//        Map<String, List<String>> backgroundHashMap = new HashMap<>();
+//        backgroundHashMap.put("Justin", new ArrayList<>(Arrays.asList("Codeup Text", "Shadow", "Codeup Logo")));
+//        backgroundHashMap.put("Roland", new ArrayList<>(Arrays.asList("Whiteboard", "Window", "Computer")));
+//        backgroundHashMap.put("Karla", new ArrayList<>(Arrays.asList("Bridge", "Ocean", "Mountain")));
+//
+//        System.out.println(backgroundHashMap);
 
     }
 
