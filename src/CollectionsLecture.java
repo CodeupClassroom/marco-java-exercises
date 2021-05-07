@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class CollectionsLecture {
 
@@ -9,6 +6,13 @@ public class CollectionsLecture {
         for (String str : strings) {
             System.out.println(str);
         }
+    }
+
+    public static ArrayList<String> upperLastElement(ArrayList<String> input) {
+        if (input.size() == 0) return input;
+        String lastElement = input.get(input.size() - 1);
+        input.set((input.size() - 1), lastElement.toUpperCase());
+        return input;
     }
 
     public static void main(String[] args) {
@@ -21,6 +25,13 @@ public class CollectionsLecture {
 //        numbers.add(1);
 //        numbers.add(2);
 //        numbers.add(3);
+//
+//        System.out.println(numbers);
+//        numbers.add(7);
+//
+//        System.out.println(numbers);
+
+
 
 //        System.out.println(numbers); // used to peek into the list
 //        System.out.println(numbers.get(0));
@@ -30,9 +41,26 @@ public class CollectionsLecture {
 //        strings.add("bob");
 //        strings.add("hello");
 //        strings.add("etc");
+//
+//        String bob = strings.get(0);
+//
+//        System.out.println(bob.toUpperCase());
 
-//        System.out.println(strings);
-//        System.out.println(strings);
+        // TODO: write an array list of three people in this cohort
+        // TODO: print out each person's name in the list
+
+//        ArrayList<String> names = new ArrayList<>();
+//
+//        names.add("Victor");
+//        names.add("Roland");
+//        names.add("Andrew");
+//
+//        System.out.println(names.get(0));
+//        System.out.println(names.get(1));
+//        System.out.println(names.get(2));
+
+
+
 
         // Creating ArrayList with Arrays.asList()
 
@@ -51,7 +79,7 @@ public class CollectionsLecture {
 //                "Sally",
 //                "Cindy"
 //        ));
-//
+
 //        System.out.println(names.get(2));
 //        System.out.println(names.get(5)); // ?
 
@@ -65,9 +93,9 @@ public class CollectionsLecture {
 //        System.out.println(numbers);
 //        numbers.set(0, 7); // edits the value at that index
 //        System.out.println(numbers);
-//        numbers.add(10, 22); // ???
+////        numbers.add(10, 22); // ???
 //        System.out.println(numbers);
-//
+////
 //        System.out.println(numbers.size());
 
 
@@ -78,23 +106,24 @@ public class CollectionsLecture {
 //                "Sally",
 //                "Cindy"
 //        ));
-//        System.out.println(names);
+////        System.out.println(names);
 //        names.remove(0);
 //        System.out.println(names);
 
-//        names.remove("Cindy");
 //        System.out.println(names);
 
         // Removing Number by Value or Index
 
 //        ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(1, 2, 3));
-//        numbers.remove(2);
+//
 //        numbers.remove(Integer.valueOf(2)); // remove by value of the number
 //        System.out.println(numbers);
 
         // reordering list
 
+//        ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(4, 5, 1, 3));
 //        Collections.sort(numbers);
+//        System.out.println(numbers);
 //        Collections.reverse(numbers);
 //        System.out.println(numbers);
 
@@ -113,7 +142,8 @@ public class CollectionsLecture {
 //        System.out.println(roasts);
 //        System.out.println(roasts.contains("dark"));
 //        System.out.println(roasts.contains("espresso"));
-//        System.out.println(roasts.lastIndexOf("medium"));
+//        System.out.println(roasts.indexOf("medium")); // 0
+//        System.out.println(roasts.lastIndexOf("medium")); // 2
 //        System.out.println(roasts.isEmpty());
 
         /*
@@ -121,9 +151,9 @@ public class CollectionsLecture {
             TODO:
                1. Create a class called CollectionsPractice with a main method.
                2. Create a static method, upperLastElement, that takes in an array list and
-                  returns the array list with last string capitalized. An empty array list
+                  returns the array list with last string upper case. An empty array list
                   should be returned if the passed array list is empty. If the passed array
-                  list only has one string, capitalize it.
+                  list only has one string, uppercase it.
                3. In the main method, create an array list of first name strings of three people in Marco.
                4. Test the upperLastElement method on your array of Marco people.
 
@@ -139,6 +169,14 @@ public class CollectionsLecture {
                upperLastElement(names3) should return an empty array list
 
          */
+
+
+//        ArrayList<String> names1 = new ArrayList<>(Arrays.asList("Justin", "Douglas", "Kenneth"));
+//        ArrayList<String> names2 = new ArrayList<>(Arrays.asList("Kenneth"));
+//        ArrayList<String> names3 = new ArrayList<>();
+//        System.out.println(upperLastElement(names1));
+//        System.out.println(upperLastElement(names2));
+//        System.out.println(upperLastElement(names3));
 
         // List vs. ArrayList (Polymorphism)
 
@@ -176,7 +214,6 @@ public class CollectionsLecture {
 //        System.out.println(usernames);
 //        System.out.println(usernames.get("Justin"));
 //        System.out.println(usernames.get("Phillip"));
-//        System.out.println(usernames.get("Justin"));
 //        System.out.println(usernames.getOrDefault("Fred", "gocodeup"));
 //        System.out.println(usernames.containsKey("Luis"));
 
@@ -184,25 +221,41 @@ public class CollectionsLecture {
 
 //        usernames.put("Ryan", "rorsinger");
 //        System.out.println(usernames);
-//        System.out.println(usernames);
 //        usernames.put("Ryan", "Test");
 //
 //        usernames.putIfAbsent("Zach", "coderdude24");
 //        System.out.println(usernames);
-//        usernames.replace("Ryan", "torvalds"); // same as put
 //        System.out.println(usernames);
 
-        // removing pairs from hash map
+        // removing entries from hash map
 
 //        System.out.println(usernames.remove("Zach"));
 //        System.out.println(usernames);
 //        System.out.println(usernames.remove("Zach"));
-//        System.out.println(usernames);
 //        System.out.println(usernames);
 //        usernames.clear();
 //        System.out.println(usernames);
 //        System.out.println(usernames.isEmpty());
 
+        /*
+
+            TODO: Create a HashMap of three people in class with keys using their last name
+             and values at those keys using their first name.
+
+             Example
+
+             "Justin" could be returned from nameHashMap.get("Reich")
+
+            TODO: Create a HashMap containing three people in the class with keys using their
+             first name and values that are an ArrayList of strings containing at least two
+             objects visible in their background.
+
+             Example
+
+             ArrayList<String> with values ("Codeup Sign", "Black Background", "Nothing Else")
+             from backgroundHashMap.get("Justin")
+
+         */
 
     }
 
